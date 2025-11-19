@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import SearchRides from './components/SearchRides'
 import RideForm from './components/RideForm'
+import AISuggestions from './components/AISuggestions'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <main className="relative max-w-5xl mx-auto px-4 py-10">
         <section className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">Match rides to base and back home</h2>
-          <p className="text-slate-300 mt-2">Search rides near your area, or offer seats in your car. Built for soldiers to save time and money.</p>
+          <p className="text-slate-300 mt-2">Search rides near your area, offer seats, or let AI suggest your best matches.</p>
         </section>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -24,7 +25,12 @@ function App() {
           </div>
         </div>
 
-        <p className="text-xs text-slate-500 mt-6 text-center">Tip: First create your soldier profile via the backend, then paste your Soldier ID when offering a ride.</p>
+        <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 mt-6">
+          <h3 className="text-xl font-semibold text-white mb-3">AI ride suggestions</h3>
+          <AISuggestions />
+        </div>
+
+        <p className="text-xs text-slate-500 mt-6 text-center">Tip: Create your soldier profile via the backend first, then paste your Soldier ID for AI suggestions and ride offers.</p>
       </main>
     </div>
   )
